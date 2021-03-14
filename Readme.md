@@ -10,7 +10,7 @@ Those can be changed after rendering the home page and press the button search t
 2. Fill the env variable with the API key needed and the port
 3. Run `npm install` on the termilan from the root directory to install all dependecies
 4. Run `npm start` on the terminal from the root directory
-5. Open the browser for localhost:port
+5. Open the browser for localhost:port (the app was configured for default in the port 3000, you can override)
 6. Alternatively you can use it as microservice by using the command `docker-compose up` from the root directory
 7. Run `npm run test` to run the test file
 
