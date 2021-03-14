@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Api News</title>
+		<link rel="stylesheet" href="/css/styles.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bungee&family=Monoton&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo">News API portal</div>
+			<div class="header__search">
+				<form action="/" method="POST">
+					<label for="sort">Sort by:</label>
+					<select name="sort" id="sort">
+						<option value="popularity">Popularity</option>
+						<option value="relevancy">Relevancy</option>
+						<option value="publishedAt">Published at</option>
+					</select>
+					<label for="date">Date:</label>
+					<input type="date" name="date" />
+					<label for="searc">Keywords:</label>
+					<input
+						type="text"
+						name="search"
+						placeholder="Search for news"
+						required
+					/>
+
+					<input type="submit" value="Search" />
+				</form>
+			</div>
+		</header>
+
+		<div class="wrapper">
+			<div class="news">
+				<% if(news != null){ %> <% news.forEach(function(item, index) { %>
+				<a href="<%- item.url %>" class="news__card">
+					<img src="<%- item.urlToImage %>" alt="<%- item.title %>" />
+					<h2><%- item.title %></h2>
+					<p><%- item.description %></p>
+				</a>
+				<% }) %> <% } else { %> No News Found <% } %>
+			</div>
+		</div>
+	</body>
+</html>
