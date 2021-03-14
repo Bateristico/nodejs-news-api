@@ -8,10 +8,11 @@ Those can be changed after rendering the home page and press the button search t
 
 1. Download the repository
 2. Fill the env variable with the API key needed and the port
-3. Run `npm start` on the terminal from the root directory
-4. Open the browser for localhost:port
-5. Alternatively you can use it as microservice by using the command `docker-compose up` from the root directory
-6. Run `npm run test` to run the test file
+3. Run `npm install` on the termilan from the root directory to install all dependecies
+4. Run `npm start` on the terminal from the root directory
+5. Open the browser for localhost:port
+6. Alternatively you can use it as microservice by using the command `docker-compose up` from the root directory
+7. Run `npm run test` to run the test file
 
 ## Others
 
